@@ -1,0 +1,71 @@
+Time now is  2022-03-30 03:44:57.379839
+The current executed script is  /projects/siuyinlee@xsede.org/scripts/HPC_XSEDE/Run_v2/MS_run5_0330_serial_200/param_list_fit_job_5_56.py
+Log file output directory is  tune_output_03:44:57.379839/Tune_Log2022-03-30.txt
+Data input directory is  /projects/siuyinlee@xsede.org/scripts/Data/compiled_all_tiles_clean_v2.csv
+################################################################################
+data proportion used is  1.0
+predictor names are  ['nbrt1_diff_3yr_over_mean', 'nbr2_difference_3yr', 'mirbi_difference_3yr', 'band6', 'nbrt1_z_score', 'ndmi', 'gemi_mean_3yr', 'nbr2_z_score', 'nbrt1_sd_3yr', 'savi_mean_3yr', 'TCbrightness_mean_3yr', 'mirbi', 'TCgreenness_diff_3yr_over_mean', 'nbr2', 'nbrt1_difference_3yr', 'TCgreenness_mean_3yr', 'nbr_difference_3yr', 'mirbi_z_score', 'vi6t_difference_3yr', 'TCbrightness_z_score', 'nbr2_diff_3yr_over_mean', 'TCgreenness_z_score', 'vi46_diff_3yr_over_mean', 'vi47_z_score', 'vi47_diff_3yr_over_mean', 'vi57_z_score', 'ndwi_z_score', 'nbr2_mean_3yr', 'ndvi_mean_3yr', 'evi_z_score', 'evi_sd_3yr', 'vi43_diff_3yr_over_mean', 'TCwetness_sd_3yr', 'band1', 'ndvi', 'ndvi_difference_3yr', 'TCwetness_diff_3yr_over_mean', 'vi43_sd_3yr', 'ndwi_diff_3yr_over_mean', 'vi43_z_score', 'TCgreenness_difference_3yr', 'bai_diff_3yr_over_mean', 'evi_difference_3yr', 'vi6t_z_score', 'nbrt1', 'TCgreenness', 'vi45_mean_3yr', 'bai_mean_3yr', 'vi43_mean_3yr', 'TCwetness_mean_3yr', 'bai_z_score', 'savi_difference_3yr', 'vi57_diff_3yr_over_mean', 'band7', 'evi', 'nbr_mean_3yr']
+response name is  fire
+random state is set at  25
+################################################################################
+################################################################################
+Start time for tuning proceess is  2022-03-30 03:46:11.802573
+End time for the full model fit is  2022-03-30 15:59:01.374652
+Total tuning time is  12:12:49.572079
+Best trial: score 0.9732095419296157,
+params {'reg_alpha': 2.3087445982646853, 'reg_lambda': 9.185897991442204, 'subsample': 0.8376273311541326, 'colsample_bytree': 0.7333090667948312, 'max_depth': 10, 'min_child_weight': 8, 'learning_rate': 0.0571035315713899, 'gamma': 0.686509279863869, 'grow_policy': 'lossguide', 'max_delta_step': 9.89518925762564, 'scale_pos_weight': 17.29253415864619}
+################################################################################
+Outputting History CSV 2022-03-30 15:59:01.375005
+################################################################################
+Param Importance:
+OrderedDict([('scale_pos_weight', 0.6034153267938008), ('learning_rate', 0.11122025477382606), ('gamma', 0.06430184407934203), ('subsample', 0.04602311241763148), ('min_child_weight', 0.044306960014505375), ('reg_alpha', 0.04250703128630869), ('max_depth', 0.04132205700212103), ('grow_policy', 0.022236215920805436), ('colsample_bytree', 0.009714782257170254), ('reg_lambda', 0.008694787547652861), ('max_delta_step', 0.006257627906835956)])
+################################################################################
+Outputting Param Importance Plot 2022-03-30 15:59:08.414392
+################################################################################
+Outputting History Plot 2022-03-30 15:59:17.274145
+################################################################################
+Outputting Slice Plot 2022-03-30 15:59:17.477184
+################################################################################
+Outputting Parallel-Coor Plot 2022-03-30 15:59:19.802630
+Tuning Processing finished. Total Tuning time is  12:14:23.044127
+################################################################################
+################################################################################
+Now we will use the chosen parameters to examine the learning curves
+Final Param Set is:
+{'reg_alpha': 2.3087445982646853, 'reg_lambda': 9.185897991442204, 'subsample': 0.8376273311541326, 'colsample_bytree': 0.7333090667948312, 'max_depth': 10, 'min_child_weight': 8, 'learning_rate': 0.0571035315713899, 'gamma': 0.686509279863869, 'grow_policy': 'lossguide', 'max_delta_step': 9.89518925762564, 'scale_pos_weight': 17.29253415864619, 'n_jobs': -1, 'verbosity': 0, 'n_estimators': 1000, 'objective': 'binary:logistic', 'booster': 'gbtree', 'use_label_encoder': False}
+Start fit 2022-03-30 15:59:20.424424
+{'objective': 'binary:logistic', 'use_label_encoder': False, 'base_score': 0.5, 'booster': 'gbtree', 'colsample_bylevel': 1, 'colsample_bynode': 1, 'colsample_bytree': 0.7333090667948312, 'gamma': 0.686509279863869, 'gpu_id': -1, 'importance_type': 'gain', 'interaction_constraints': '', 'learning_rate': 0.0571035315713899, 'max_delta_step': 9.89518925762564, 'max_depth': 10, 'min_child_weight': 8, 'missing': nan, 'monotone_constraints': '()', 'n_estimators': 1000, 'n_jobs': -1, 'num_parallel_tree': 1, 'random_state': 0, 'reg_alpha': 2.3087445982646853, 'reg_lambda': 9.185897991442204, 'scale_pos_weight': 17.29253415864619, 'subsample': 0.8376273311541326, 'tree_method': 'exact', 'validate_parameters': 1, 'verbosity': 0, 'grow_policy': 'lossguide'}
+End fit 2022-03-30 16:03:07.675972
+Fitting time:  0:03:47.251548
+Done plotting learning curve
+################################################################################
+Start time for val is  2022-03-30 16:03:08.561024
+{'objective': 'binary:logistic', 'use_label_encoder': False, 'base_score': None, 'booster': 'gbtree', 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.7333090667948312, 'gamma': 0.686509279863869, 'gpu_id': None, 'importance_type': 'gain', 'interaction_constraints': None, 'learning_rate': 0.0571035315713899, 'max_delta_step': 9.89518925762564, 'max_depth': 10, 'min_child_weight': 8, 'missing': nan, 'monotone_constraints': None, 'n_estimators': 1000, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': None, 'reg_alpha': 2.3087445982646853, 'reg_lambda': 9.185897991442204, 'scale_pos_weight': 17.29253415864619, 'subsample': 0.8376273311541326, 'tree_method': None, 'validate_parameters': None, 'verbosity': 0, 'grow_policy': 'lossguide'}
+Final validation scores (auc, ap, logloss):
+0.998 0.978 0.023
+Process time for the val_score is  0:03:28.084352
+################################################################################
+################################################################################
+Classification report for validation data:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00    167812
+           1       0.93      0.93      0.93      9547
+
+    accuracy                           0.99    177359
+   macro avg       0.96      0.96      0.96    177359
+weighted avg       0.99      0.99      0.99    177359
+
+################################################################################
+################################################################################
+Confusion matrix for validation data:
+[[167118    694]
+ [   633   8914]]
+################################################################################
+################################################################################
+Confusion matrix for validation data (Normalized by true label):
+[[0.99586442 0.00413558]
+ [0.06630355 0.93369645]]
+################################################################################
+################################################################################
+Outputting PRAUC Plot 2022-03-30 16:06:36.894945
